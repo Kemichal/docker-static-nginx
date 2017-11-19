@@ -1,0 +1,10 @@
+version: "3.0"
+services:
+    static:
+        image: kemichal/static-nginx:1.0.0
+        container_name: static
+        ports:
+            - "80:80"
+        volumes:
+            - /srv/nginx/data:/var/www/html
+            - /srv/nginx/conf:/etc/nginx/conf.d
